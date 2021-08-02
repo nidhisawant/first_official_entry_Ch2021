@@ -136,7 +136,7 @@ fb_feat(isnan(fb_feat))=0;
 fb_feat(isinf(fb_feat))=0;
 mu_fb = mean(fb_feat);
 sg_fb = std(fb_feat,[],1);
-for n=1:size(fb_feat,1);
+for n=1:size(fb_feat,1)
 fb_feat2(n,:)=(fb_feat(n,:)-mu_fb)./sg_fb;
 end
 

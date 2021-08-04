@@ -68,7 +68,7 @@ for i=1:size(rytdata{1},1)
     traindata=data;
     Ytrain=af_afl_lab;
     t = ClassificationTree.template('minleaf',1);
-    model_af_afl{i} = fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification');
+    model_af_afl{i} = compact(fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification'));
 end
 model{3}=model_af_afl;
 
@@ -82,7 +82,7 @@ for i=1:size(afvsafl_data{1},1)
     traindata=data;
     Ytrain=afvsafl_lab;
     t = ClassificationTree.template('minleaf',1);
-    model_afvsafl{i} = fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification');
+    model_afvsafl{i} = compact(fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification'));
 end
 model{4}=model_afvsafl;
 
@@ -96,7 +96,7 @@ for i=1:size(other_rythms_data{1},1)
     traindata=data;
     Ytrain=brady_lab;
     t = ClassificationTree.template('minleaf',1);
-    model_brady{i} = fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification');
+    model_brady{i} = compact(fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification'));
 end
 model{5}=model_brady;
 
@@ -107,7 +107,7 @@ for i=1:size(other_rythms_data{1},1)
     traindata=data;
     Ytrain=lpr_lab;
     t = ClassificationTree.template('minleaf',1);
-    model_lpr{i} = fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification');
+    model_lpr{i} = compact(fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification'));
 end
 model{6}=model_lpr;
 
@@ -118,7 +118,7 @@ for i=1:size(other_rythms_data{1},1)
     traindata=data;
     Ytrain=lqt_lab;
     t = ClassificationTree.template('minleaf',1);
-    model_lqt{i} = fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification');
+    model_lqt{i} = compact(fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification'));
 end
 model{7}=model_lqt;
 
@@ -130,7 +130,7 @@ for i=1:size(other_rythms_data{1},1)
     traindata=data;
     Ytrain=pac_lab;
     t = ClassificationTree.template('minleaf',1);
-    model_pac{i} = fitensemble(traindata,Ytrain,'Bag',90,t,'type','classification');
+    model_pac{i} = compact(fitensemble(traindata,Ytrain,'Bag',90,t,'type','classification'));
 end
 model{8}=model_pac;
 
@@ -143,7 +143,7 @@ for i=1:size(other_rythms_data{1},1)
     traindata=data;
     Ytrain=pvc_lab;
     t = ClassificationTree.template('minleaf',1);
-    model_pvc{i} = fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification');
+    model_pvc{i} = compact(fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification'));
 end
 model{9}=model_pvc;
 
@@ -157,7 +157,7 @@ for i=1:size(other_branch_data{1},1)
     traindata=data;
     Ytrain=sb_lab;
     t = ClassificationTree.template('minleaf',1);
-    model_sb{i} = fitensemble(traindata,Ytrain,'Bag',90,t,'type','classification');
+    model_sb{i} = compact(fitensemble(traindata,Ytrain,'Bag',90,t,'type','classification'));
 end
 model{10}=model_sb;
 
@@ -171,7 +171,7 @@ for i=1:size(stach_data{1},1)
     traindata=data;
     Ytrain=stach_lab;
     t = ClassificationTree.template('minleaf',1);
-    model_stach{i} = fitensemble(traindata,Ytrain,'Bag',90,t,'type','classification');
+    model_stach{i} = compact(fitensemble(traindata,Ytrain,'Bag',90,t,'type','classification'));
 end
 model{11}=model_stach;
 
@@ -185,7 +185,7 @@ for i=1:size(sa_data{1},1)
     traindata=data;
     Ytrain=sa_lab;
     t = ClassificationTree.template('minleaf',1);
-    model_sa{i} = fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification');
+    model_sa{i} = compact(fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification'));
 end
 model{12}=model_sa;
 
@@ -200,7 +200,7 @@ for i=1:size(nonsa_data{1},1)
     traindata=data;
     Ytrain=bbbnode_lab;
     t = ClassificationTree.template('minleaf',1);
-    model_allbbb{i} = fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification');
+    model_allbbb{i} = compact(fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification'));
 end
 model{13}=model_allbbb;
 
@@ -215,7 +215,7 @@ for i=1:size(allbbb_data{1},1)
     traindata=data;
     Ytrain=crbbb_lab;
     t = ClassificationTree.template('minleaf',1);
-    model_crbbb{i} = fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification');
+    model_crbbb{i} = compact(fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification'));
 end
 model{14}=model_crbbb;
 
@@ -227,7 +227,7 @@ for i=1:size(allbbb_data{1},1)
     traindata=data;
     Ytrain=clbbb_lab;
     t = ClassificationTree.template('minleaf',1);
-    model_clbbb{i} = fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification');
+    model_clbbb{i} = compact(fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification'));
 end
 model{15}=model_clbbb;
 
@@ -238,7 +238,7 @@ for i=1:size(allbbb_data{1},1)
     traindata=data;
     Ytrain=bbb_lab;
     t = ClassificationTree.template('minleaf',1);
-    model_bbb{i} = fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification');
+    model_bbb{i} = compact(fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification'));
 end
 model{16}=model_bbb;
 
@@ -249,7 +249,7 @@ for i=1:size(allbbb_data{1},1)
     traindata=data;
     Ytrain=irbbb_lab;
     t = ClassificationTree.template('minleaf',1);
-    model_irbbb{i} = fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification');
+    model_irbbb{i} = compact(fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification'));
 end
 model{17}=model_irbbb;
 
@@ -264,7 +264,7 @@ for i=1:size(nonbbb_data{1},1)
     traindata=data;
     Ytrain=iavb_lab;
     t = ClassificationTree.template('minleaf',1);
-    model_iavb{i} = fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification');
+    model_iavb{i} = compact(fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification'));
 end
 model{18}=model_iavb;
 
@@ -276,7 +276,7 @@ for i=1:size(nonbbb_data{1},1)
     traindata=data;
     Ytrain=lad_lab;
     t = ClassificationTree.template('minleaf',1);
-    model_lad{i} = fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification');
+    model_lad{i} = compact(fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification'));
 end
 model{19}=model_lad;
 
@@ -287,7 +287,7 @@ for i=1:size(nonbbb_data{1},1)
     traindata=data;
     Ytrain=lanfb_lab;
     t = ClassificationTree.template('minleaf',1);
-    model_lanfb{i} = fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification');
+    model_lanfb{i} = compact(fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification'));
 end
 model{20}=model_lanfb;
 
@@ -298,7 +298,7 @@ for i=1:size(nonbbb_data{1},1)
     traindata=data;
     Ytrain=lqrsv_lab;
     t = ClassificationTree.template('minleaf',1);
-    model_lqrsv{i} = fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification');
+    model_lqrsv{i} = compact(fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification'));
 end
 model{21}=model_lqrsv;
 
@@ -309,7 +309,7 @@ for i=1:size(nonbbb_data{1},1)
     traindata=data;
     Ytrain=nsivcb_lab;
     t = ClassificationTree.template('minleaf',1);
-    model_nsivcb{i} = fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification');
+    model_nsivcb{i} = compact(fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification'));
 end
 model{22}=model_nsivcb;
 
@@ -320,7 +320,7 @@ for i=1:size(nonbbb_data{1},1)
     traindata=data;
     Ytrain=pr_lab;
     t = ClassificationTree.template('minleaf',1);
-    model_pr{i} = fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification');
+    model_pr{i} = compact(fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification'));
 end
 model{23}=model_pr;
 
@@ -331,7 +331,7 @@ for i=1:size(nonbbb_data{1},1)
     traindata=data;
     Ytrain=prwp_lab;
     t = ClassificationTree.template('minleaf',1);
-    model_prwp{i} = fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification');
+    model_prwp{i} = compact(fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification'));
 end
 model{24}=model_prwp;
 
@@ -342,7 +342,7 @@ for i=1:size(nonbbb_data{1},1)
     traindata=data;
     Ytrain=qab_lab;
     t = ClassificationTree.template('minleaf',1);
-    model_qab{i} = fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification');
+    model_qab{i} = compact(fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification'));
 end
 model{25}=model_qab;
 
@@ -353,7 +353,7 @@ for i=1:size(nonbbb_data{1},1)
     traindata=data;
     Ytrain=rad_lab;
     t = ClassificationTree.template('minleaf',1);
-    model_rad{i} = fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification');
+    model_rad{i} = compact(fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification'));
 end
 model{26}=model_rad;
 
@@ -364,7 +364,7 @@ for i=1:size(nonbbb_data{1},1)
     traindata=data;
     Ytrain=tab_lab;
     t = ClassificationTree.template('minleaf',1);
-    model_tab{i} = fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification');
+    model_tab{i} = compact(fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification'));
 end
 model{27}=model_tab;
 
@@ -375,7 +375,7 @@ for i=1:size(nonbbb_data{1},1)
     traindata=data;
     Ytrain=tinv_lab;
     t = ClassificationTree.template('minleaf',1);
-    model_tinv{i} = fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification');
+    model_tinv{i} = compact(fitensemble(traindata,Ytrain,'RusBoost',90,t,'type','classification'));
 end
 model{28}=model_tinv;
 
